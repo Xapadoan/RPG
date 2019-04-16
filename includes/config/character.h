@@ -1,0 +1,6 @@
+#ifndef DEF_CST_CHARACTER
+#define DEF_CST_CHARACTER
+
+#define CHARACTER_NAME_LEN_MAX 16
+
+#endif

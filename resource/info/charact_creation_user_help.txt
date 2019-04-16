@@ -1,0 +1,4 @@
+Use LEFT or RIGHT arrow keys to change gender 
+Press E to choose a race 
+Press E to choose a name, then RETURN to confirm 
+Press E to confirm the creation of this character 

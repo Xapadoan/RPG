@@ -1,0 +1,15 @@
+Fonts :
+	Title screen : alagard, by Hewett Tsoi (Dafont)
+	Main menu : alagard, by Hewett Tsoi (Dafont)
+	Item Exchange Menu :
+		Name : octavius, by Brixdee (Dafont)
+		Copper : octavius, by Brixdee (Dafont)
+	
+
+Musics :
+	Title screen : Meekness, from Sustains by Kai Engel
+
+Sound Chunks :
+	From Freesound.org
+
+	Action denied : Wrong, by TheBuilder15

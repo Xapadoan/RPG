@@ -1,0 +1,34 @@
+100	bed	203	028	0C8	028	000	2
+bed_struct_00.png	000	000	000
+bed_blanket_00.png	000	000	000
+
+001	council_table	0D0	040	17E	080	000	1
+wooden_council_table_00.png	000	000	000
+
+202	large_desk	184	050	100	020	000	2
+large_wooden_desk_down_00.png	000	018	000
+large_wooden_desk_top_00.png	000	000	000
+
+103	chair	0E3	01A	15E	01F	000	2
+wooden_chair_sit_00.png	002	006	000
+wooden_chair_back_down_00.png	000	000	000
+
+104	chair	0E3	01A	1FE	019	180	2
+wooden_chair_sit_00.png	002	000	000
+wooden_chair_back_up_00.png	000	00C	000
+
+105	chair	110	01E	19D	01C	270	2
+wooden_chair_sit_00.png	000	003	000
+wooden_chair_back_right_00.png	014	000	000
+
+106	chair	110	01E	1C0	01C	270	2
+wooden_chair_sit_00.png	000	003	000
+wooden_chair_back_right_00.png	014	000	000
+
+107	chair	0B6	01E	19D	01C	090	2
+wooden_chair_sit_00.png	003	003	000
+wooden_chair_back_left_00.png	000	000	000
+
+108	chair	0B6	01E	1C0	01C	090	2
+wooden_chair_sit_00.png	003	003	000
+wooden_chair_back_left_00.png	000	000	000
