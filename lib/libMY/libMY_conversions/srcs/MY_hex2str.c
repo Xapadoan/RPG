@@ -1,4 +1,4 @@
-#include "../includes/MY_hex2char.h"
+#include "libMY_conversions.h"
 
 char	*MY_hex2char(int nb)
 {
