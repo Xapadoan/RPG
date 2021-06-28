@@ -8,7 +8,7 @@
 #include "getCollisionOrigin.h"
 #include "checkRectIntersection.h"
 
-#include "../../location/includes/Direction.h"
+#include "Direction.h"
 
 int	restrictMovements(Hitbox *origin, Hitbox *env, int margin);
 
