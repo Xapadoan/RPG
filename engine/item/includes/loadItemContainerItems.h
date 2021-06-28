@@ -4,16 +4,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "../../../includes/config/map_item.h"
-#include "../../../includes/config/map.h"
+#include "map_item.h"
+#include "map.h"
 
-#include "../../../lib/libMY/libMY_string/includes/MY_str_len.h"
-#include "../../../lib/libMY/libMY_string/includes/MY_str_append.h"
+#include "MY_str_len.h"
+#include "MY_str_append.h"
 
-#include "../../../lib/libMY/libMY_int/includes/MY_hex2char.h"
+#include "MY_hex2char.h"
 
-#include "../../map/includes/Map.h"
-#include "../../map/includes/isItemContainer.h"
+#include "Map.h"
+#include "isItemContainer.h"
 
 #include "loadItemBag.h"
 

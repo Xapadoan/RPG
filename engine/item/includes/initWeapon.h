@@ -6,7 +6,7 @@
 
 #include "Weapon.h"
 #include "deleteWeapon.h"
-#include "../../display/includes/initSpriteList.h"
+#include "initSpriteList.h"
 
 Weapon	*initWeapon(void);
 

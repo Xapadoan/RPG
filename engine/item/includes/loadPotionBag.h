@@ -4,8 +4,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "../../../lib/libMY/libMY_string/includes/MY_str_len.h"
-#include "../../../lib/libMY/libMY_string/includes/MY_str_capitalize.h"
+#include "MY_str_len.h"
+#include "MY_str_capitalize.h"
 
 #include "initPotion.h"
 #include "setPotionData.h"

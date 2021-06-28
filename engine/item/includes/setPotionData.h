@@ -3,10 +3,10 @@
 
 #include <stdio.h>
 
-#include "../../../lib/libMY/libMY_string/includes/MY_str_split.h"
-#include "../../../lib/libMY/libMY_string/includes/MY_str_compare.h"
+#include "MY_str_split.h"
+#include "MY_str_compare.h"
 
-#include "../../../lib/libMY/libMY_array/includes/MY_free_2d_char.h"
+#include "MY_free_2d_char.h"
 
 #include "potionEffects.h"
 #include "linkPotionAction.h"

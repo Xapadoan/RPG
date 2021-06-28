@@ -5,7 +5,7 @@
 #include <SDL/SDL.h>
 
 #include "Weapon.h"
-#include "../../display/includes/deleteSpriteList.h"
+#include "deleteSpriteList.h"
 
 void	deleteWeapon(Weapon *weapon);
 

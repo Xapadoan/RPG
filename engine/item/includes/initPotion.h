@@ -1,7 +1,7 @@
 #ifndef INIT_POTION
 #define INIT_POTION
 
-#include "../../../includes/config/item.h"
+#include "item.h"
 
 #include <stdio.h>
 #include <stdlib.h>

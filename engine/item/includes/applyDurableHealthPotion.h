@@ -4,7 +4,7 @@
 #include <stdio.h>
 
 #include "Potion.h"
-#include "../../character/includes/Character.h"
+#include "Character.h"
 
 int	applyDurableHealthPotion(Potion *self, Character *target);
 

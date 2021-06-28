@@ -1,7 +1,7 @@
 #ifndef INIT_MISC_ITEM
 #define INIT_MISC_ITEM
 
-#include "../../../includes/config/item.h"
+#include "item.h"
 
 #include <stdio.h>
 #include <stdlib.h>

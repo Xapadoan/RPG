@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <SDL/SDL.h>
 
-#include "../../display/includes/deleteSpriteList.h"
+#include "deleteSpriteList.h"
 #include "Armor.h"
 
 void	deleteArmor(Armor *armor);

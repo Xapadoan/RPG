@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#include "../../display/includes/initSpriteList.h"
+#include "initSpriteList.h"
 
 #include "Armor.h"
 #include "deleteArmor.h"
