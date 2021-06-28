@@ -1,8 +1,8 @@
 #ifndef DEF_TEAM
 #define DEF_TEAM
 
-#include "../../location/includes/Location.h"
-#include "../../hitbox/includes/Hitbox.h"
+#include "Location.h"
+#include "Hitbox.h"
 #include "Character.h"
 
 typedef struct Team {

@@ -1,7 +1,7 @@
 #ifndef DEF_UPDATE_TEAM
 #define DEF_UPDATE_TEAM
 
-#include "../../../includes/config/character_hitbox.h"
+#include "character_hitbox.h"
 
 #include <stdio.h>
 

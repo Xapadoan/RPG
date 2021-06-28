@@ -5,8 +5,8 @@
 #include <stdlib.h>
 #include <SDL/SDL.h>
 
-#include "../../character/includes/searchStandUpPos.h"
-#include "../../map/includes/Map.h"
+#include "searchStandUpPos.h"
+#include "Map.h"
 #include "Team.h"
 
 int	standUp(Team *team, Map *map, int dir);

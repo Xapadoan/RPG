@@ -8,7 +8,7 @@
 #include "enterMap.h"
 #include "initTeam.h"
 
-#include "../../../menu/character_creation/includes/useCharacterCreationMenu.h"
+#include "useCharacterCreationMenu.h"
 
 int	createTeam(SDL_Surface *screen, struct Team *team);
 

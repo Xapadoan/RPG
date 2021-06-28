@@ -1,7 +1,7 @@
 #ifndef DEF_CHANGE_TEAM_STATE
 #define DEF_CHANGE_TEAM_STATE
 
-#include "../../map/includes/Map.h"
+#include "Map.h"
 #include "Team.h"
 
 #include "standUp.h"

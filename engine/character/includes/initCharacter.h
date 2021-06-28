@@ -5,9 +5,9 @@
 #include <stdlib.h>
 
 #include "Character.h"
-#include "../../location/includes/Direction.h"
-#include "../../map/includes/initMapItem.h"
-#include "../../item/includes/initPotionBag.h"
+#include "Direction.h"
+#include "initMapItem.h"
+#include "initPotionBag.h"
 
 int	initCharacter(Character *character);
 
