@@ -1,7 +1,7 @@
 #ifndef DEF_ADD_TO_SPRITE_LIST
 #define DEF_ADD_TO_SPRITE_LIST
 
-#include "../../../includes/config/screen.h"
+#include "screen.h"
 
 #include "SpriteList.h"
 

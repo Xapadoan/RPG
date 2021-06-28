@@ -3,7 +3,7 @@
 
 #include <SDL/SDL.h>
 
-#include "../../hitbox/includes/Hitbox.h"
+#include "Hitbox.h"
 
 void	displayHitbox(SDL_Surface *dest, Hitbox *hitbox);
 

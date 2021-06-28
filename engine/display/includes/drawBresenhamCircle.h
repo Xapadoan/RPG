@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <SDL/SDL.h>
 
-#include "../../../lib/libMY/libMY_int/includes/MY_abs.h"
+#include "MY_abs.h"
 
 #include "putPixel.h"
 #include "circle_portions.h"
