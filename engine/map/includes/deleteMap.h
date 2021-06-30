@@ -6,7 +6,7 @@
 #include "Map.h"
 #include "deleteMapBag.h"
 
-#include "../../hitbox/includes/deleteHitbox.h"
+#include "deleteHitbox.h"
 
 void	deleteMap(Map *map);
 

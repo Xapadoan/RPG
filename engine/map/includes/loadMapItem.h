@@ -1,7 +1,7 @@
 #ifndef DEF_LOAD_MAP_ITEM
 #define DEF_LOAD_MAP_ITEM
 
-#include "../../../includes/config/map_item.h"
+#include "map_item.h"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -9,18 +9,18 @@
 #include <SDL/SDL_rotozoom.h>
 #include <SDL/SDL_image.h>
 
-#include "../../../lib/libMY/libMY_string/includes/MY_str_len.h"
-#include "../../../lib/libMY/libMY_string/includes/MY_str_append.h"
-#include "../../../lib/libMY/libMY_string/includes/MY_str_ncopy.h"
-#include "../../../lib/libMY/libMY_string/includes/MY_str_split.h"
+#include "MY_str_len.h"
+#include "MY_str_append.h"
+#include "MY_str_ncopy.h"
+#include "MY_str_split.h"
 
-#include "../../../lib/libMY/libMY_int/includes/MY_str2int.h"
+#include "MY_str2int.h"
 
-#include "../../../lib/libMY/libMY_array/includes/MY_free_2d_char.h"
+#include "MY_free_2d_char.h"
 
-#include "../../hitbox/includes/loadHitbox.h"
-#include "../../location/includes/Direction.h"
-#include "../../item/includes/loadItemContainerItems.h"
+#include "loadHitbox.h"
+#include "Direction.h"
+#include "loadItemContainerItems.h"
 
 #include "Map.h"
 #include "initMapItem.h"

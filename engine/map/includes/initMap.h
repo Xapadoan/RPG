@@ -5,7 +5,7 @@
 
 #include "Map.h"
 #include "initMapBag.h"
-#include "../../hitbox/includes/initHitbox.h"
+#include "initHitbox.h"
 
 int	initMap(Map *map);
 

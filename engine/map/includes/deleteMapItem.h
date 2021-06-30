@@ -4,8 +4,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "../../hitbox/includes/deleteHitbox.h"
-#include "../../item/includes/deleteItemBag.h"
+#include "deleteHitbox.h"
+#include "deleteItemBag.h"
 #include "isItemContainer.h"
 #include "Map.h"
 

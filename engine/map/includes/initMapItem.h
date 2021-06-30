@@ -4,8 +4,8 @@
 #include <stdlib.h>
 
 #include "Map.h"
-#include "../../hitbox/includes/initHitbox.h"
-#include "../../item/includes/initItemBag.h"
+#include "initHitbox.h"
+#include "initItemBag.h"
 
 void	initMapItem(MapItem *item);
 

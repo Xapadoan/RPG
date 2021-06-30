@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "../../../lib/libMY/libMY_file/includes/MY_go_to_next_line.h"
+#include "MY_go_to_next_line.h"
 
 #include "Map.h"
 #include "loadMapItem.h"

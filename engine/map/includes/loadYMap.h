@@ -1,7 +1,7 @@
 #ifndef DEF_LOAD_YMAP
 #define DEF_LOAD_YMAP
 
-#include "../../../includes/config/map.h"
+#include "map.h"
 
 #include <stdio.h>
 #include <stdlib.h>
