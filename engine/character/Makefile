@@ -32,6 +32,13 @@ OBJ=changeTeamState.o\
 		standUp.o\
 		updateTeam.o
 
+all: $(OBJ)
+
+clean:
+	rm -f $(OBJ)
+
+re: clean $(OBJ)
+
 changeTeamState.o: src/changeTeamState.c\
 	includes/changeTeamState.h\
 	includes/standUp.h\
@@ -140,10 +147,3 @@ updateTeam.o: src/updateTeam.c\
 	includes/loadCharacterSprite.h\
 	../../includes/config/character_hitbox.h
 	$(CC) $(CC_FLAGS) $< -o $@
-
-all: $(OBJ)
-
-clean:
-	rm -f $(OBJ)
-
-re: clean $(OBJ)

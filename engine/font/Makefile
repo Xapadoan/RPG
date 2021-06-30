@@ -11,6 +11,13 @@ OBJ=putFont.o\
 		putFontCenter.o\
 		putFontColumn.o
 
+all: $(OBJ)
+
+clean:
+	rm -f $(OBJ)
+
+re: clean $(OBJ)
+
 putFont.o: src/putFont.c\
 	includes/putFont.h
 	$(CC) $(CC_FLAGS) $< -o $@
@@ -24,10 +31,3 @@ putFontColumn.o: src/putFontColumn.c\
 	../../lib/libMY/libMY_string/includes/MY_str_len.h\
 	../../lib/libMY/libMY_string/includes/MY_str_append.h
 	$(CC) $(CC_FLAGS) $< -o $@
-
-all: $(OBJ)
-
-clean:
-	rm -f $(OBJ)
-
-re: clean $(OBJ)

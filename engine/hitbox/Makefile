@@ -23,6 +23,13 @@ OBJ=addToHitbox.o\
 		restrictMovements.o\
 		scanIntersection.o
 
+all: $(OBJ)
+
+clean:
+	rm -f $(OBJ)
+
+re: clean $(OBJ)
+
 addToHitbox.o: src/addToHitbox.c\
 	includes/addToHitbox.h\
 	includes/Hitbox.h
@@ -91,10 +98,3 @@ scanIntersection.o: src/scanIntersection.c\
 	includes/copyToHitbox.h\
 	includes/initHitbox.h
 	$(CC) $(CC_FLAGS) $< -o $@
-
-all: $(OBJ)
-
-clean:
-	rm -f $(OBJ)
-
-re: clean $(OBJ)

@@ -30,6 +30,13 @@ OBJ=addToSpriteList.o\
 		putPixel.o\
 		sortGroundItems.o
 
+all: $(OBJ)
+
+clean:
+	rm -f $(OBJ)
+
+re: clean $(OBJ)
+
 addToSpriteList.o: src/addToSpriteList.c\
 	includes/addToSpriteList.h\
 	includes/SpriteList.h\
@@ -121,10 +128,3 @@ sortGroundItems.o: src/sortGroundItems.c\
 	../character/includes/Team.h\
 	../hitbox/includes/checkRectIntersection.h
 	$(CC) $(CC_FLAGS) $< -o $@
-
-all: $(OBJ)
-
-clean:
-	rm -f $(OBJ)
-
-re: clean $(OBJ)

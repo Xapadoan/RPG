@@ -50,6 +50,13 @@ OBJ=addCopyToPotionBag.o\
 		loadPotionBag.o\
 		setPotionData.o
 
+all: $(OBJ)
+
+clean:
+	rm -f $(OBJ)
+
+re: clean $(OBJ)
+
 addCopyToPotionBag.o: src/addCopyToPotionBag.c\
 	includes/addCopyToPotionBag.h\
 	includes/Potion.h\
@@ -248,10 +255,3 @@ setPotionData.o: src/setPotionData.c\
 	../../lib/libMY/libMY_string/includes/MY_str_compare.h\
 	../../lib/libMY/libMY_string/includes/MY_str_split.h
 	$(CC) $(CC_FLAGS) $< -o $@
-
-all: $(OBJ)
-
-clean:
-	rm -f $(OBJ)
-
-re: clean $(OBJ)
