@@ -5,9 +5,9 @@
 #include <stdlib.h>
 #include "Location.h"
 
-#include "../../../lib/libMY/libMY_string/includes/MY_str_len.h"
-#include "../../../lib/libMY/libMY_string/includes/MY_clear_string.h"
-#include "../../../lib/libMY/libMY_string/includes/MY_str_append.h"
+#include "MY_str_len.h"
+#include "MY_clear_string.h"
+#include "MY_str_append.h"
 
 int	setLocationMap(Location *location, const char *map_name);
 
