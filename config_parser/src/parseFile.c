@@ -34,7 +34,7 @@ int	parseFile(FILE *src_file, FILE *dest_file, const char *file_name)
 			MY_str_append(attribute_name, file_name);
 			MY_str_to_upper(attribute_name);
 			MY_str_append(attribute_name, "_");
-		} else if (array_line[1] == '\0' && array_line[0][MY_str_len(array_line[0]) - 2] == ':') {
+		} else if (*(array_line[1]) == '\0' && array_line[0][MY_str_len(array_line[0]) - 2] == ':') {
 			//If line is like "attribute_details:\n"
 			attribute_name = extendAttributeName(attribute_name, array_line[0]);
 		} else {
