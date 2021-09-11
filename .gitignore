@@ -3,3 +3,7 @@ resource
 *.vscode
 a.out
 /save/*.save
+/config_parser/parseConfig
+/myRPG-v*
+/lib/libMY/MY_*.h
+/lib/libMY/libMY_*.a
