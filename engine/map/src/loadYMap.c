@@ -41,9 +41,11 @@ SDL_Surface	*loadYMap(const char *map_path){
 SDL_Rect	getMapDimensions(FILE *map_file){
 	SDL_Rect dim;
 	char line[200];
-	char clen[3];
-	char cheight[3];
+	char clen[4];
+	char cheight[4];
 
+	dim.x = 0;
+	dim.y = 0;
 	dim.w = 0;
 	dim.h = 0;
 

@@ -7,16 +7,17 @@ CC_FLAGS=-g\
 				 -iquote includes\
 				 -iquote ../../includes/config\
 				 -iquote ../map/includes\
+				 -iquote ../item/includes\
 				 -iquote ../character/includes\
 				 -iquote ../hitbox/includes\
-				 -iquote ../../lib/libMY/libMY_string/includes\
-				 -iquote ../../lib/libMY/libMY_int/includes\
+				 -iquote ../../lib/libMY\
 				 -iquote ../location/includes
 
 OBJ=addToSpriteList.o\
 		applyRGBA.o\
 		blitOnCenter.o\
 		deleteFromSpriteList.o\
+		deleteSpriteList.o\
 		displayCharacter.o\
 		displayHitbox.o\
 		displayMap.o\
@@ -53,10 +54,15 @@ deleteFromSpriteList.o: src/deleteFromSpriteList.c\
 	includes/deleteFromSpriteList.h\
 	includes/SpriteList.h
 	$(CC) $(CC_FLAGS) $< -o $@
+deleteSpriteList.o: src/deleteSpriteList.c\
+	includes/deleteSpriteList.h\
+	includes/SpriteList.h\
+	includes/deleteFromSpriteList.h
+	$(CC) $(CC_FLAGS) $< -o $@
 displayCharacter.o: src/displayCharacter.c\
 	includes/displayCharacter.h\
-	../../lib/libMY/libMY_int/includes/MY_is_pair.h\
-	../../lib/libMY/libMY_string/includes/MY_replace_char.h\
+	../../lib/libMY/MY_int.h\
+	../../lib/libMY/MY_string.h\
 	../character/includes/loadCharacterSprite.h
 	$(CC) $(CC_FLAGS) $< -o $@
 displayHitbox.o: src/displayHitbox.c\
@@ -75,8 +81,8 @@ displayMap.o: src/displayMap.c\
 	../../includes/config/screen.h\
 	../../includes/config/map.h\
 	../../includes/config/character_sprite.h\
-	../../lib/libMY/libMY_string/includes/MY_str_len.h\
-	../../lib/libMY/libMY_string/includes/MY_str_append.h\
+	../../lib/libMY/MY_string.h\
+	../../lib/libMY/MY_int.h\
 	../character/includes/Team.h\
 	../map/includes/Map.h\
 	../map/includes/initMapBag.h\
@@ -95,7 +101,7 @@ drawBresenhamCircle.o: src/drawBresenhamCircle.c\
 	includes/drawBresenhamCircle.h\
 	includes/putPixel.h\
 	includes/circle_portions.h\
-	../../lib/libMY/libMY_int/includes/MY_abs.h
+	../../lib/libMY/MY_int.h
 	$(CC) $(CC_FLAGS) $< -o $@
 drawThickCircle.o: src/drawThickCircle.c\
 	includes/drawThickCircle.h\

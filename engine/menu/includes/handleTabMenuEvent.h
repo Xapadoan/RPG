@@ -1,7 +1,7 @@
 #ifndef DEF_HANDLE_TAB_MENU_EVENT
 #define DEF_HANDLE_TAB_MENU_EVENT
 
-#include "../../../includes/config/controls.h"
+#include "controls.h"
 
 #include <stdio.h>
 #include <SDL/SDL.h>

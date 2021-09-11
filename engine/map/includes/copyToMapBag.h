@@ -6,8 +6,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "MY_str_len.h"
-#include "MY_str_ncopy.h"
+#include "MY_string.h"
 
 #include "Map.h"
 #include "addToMapBag.h"

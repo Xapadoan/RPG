@@ -52,7 +52,7 @@ int	addWeaponDataToTab(TabMenu *menu, Weapon *weapon)
 		return (0);
 	}
 	MY_str_append(entry->misc_content, weapon->name);
-	weapon_category = MY_hex2char(ITEM_CATEGORY_WEAPON);
+	weapon_category = MY_hex2str(ITEM_CATEGORY_WEAPON, 0);
 	if (!weapon_category) {
 		fputs("MY Error : Failed to convert weapon category to string\n", stderr);
 		return (0);

@@ -3,10 +3,8 @@
 
 #include <stdio.h>
 
-#include "MY_str_split.h"
-#include "MY_str_compare.h"
-
-#include "MY_free_2d_char.h"
+#include "MY_string.h"
+#include "MY_array.h"
 
 #include "potionEffects.h"
 #include "linkPotionAction.h"

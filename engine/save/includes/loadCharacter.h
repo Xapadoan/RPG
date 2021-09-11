@@ -3,10 +3,9 @@
 
 #include <stdio.h>
 
-#include "../../../lib/libMY/libMY_string/includes/MY_str_len.h"
-#include "../../../lib/libMY/libMY_string/includes/MY_str_append.h"
+#include "MY_string.h"
 
-#include "../../character/includes/Character.h"
+#include "Character.h"
 
 void	loadCharacter(Character *to_load, FILE *save_file);
 

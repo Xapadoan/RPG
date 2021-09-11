@@ -1,7 +1,7 @@
 #ifndef DEF_UPDATE_ITEM_EXCHANGE_TABS_PREVIEW
 #define DEF_UPDATE_ITEM_EXCHANGE_TABS_PREVIEW
 
-#include "../../../includes/config/menu.h"
+#include "menu.h"
 
 #include <stdio.h>
 #include <SDL/SDL.h>

@@ -7,8 +7,7 @@
 #include <stdlib.h>
 #include <SDL/SDL.h>
 
-#include "MY_str_ncopy.h"
-#include "MY_str_len.h"
+#include "MY_string.h"
 
 #include "Potion.h"
 #include "initPotion.h"

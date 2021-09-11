@@ -1,7 +1,7 @@
 #ifndef DEF_SET_TAB_MENU_WIDTH
 #define DEF_SET_TAB_MENU_WIDTH
 
-#include "../../../includes/config/menu.h"
+#include "menu.h"
 
 #include <stdio.h>
 

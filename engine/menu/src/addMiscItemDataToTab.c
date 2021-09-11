@@ -50,7 +50,7 @@ int	addMiscItemDataToTab(TabMenu *menu, MiscItem *misc_item)
 		return (0);
 	}
 	MY_str_append(entry->misc_content, misc_item->name);
-	misc_item_category = MY_hex2char(ITEM_CATEGORY_MISC);
+	misc_item_category = MY_hex2str(ITEM_CATEGORY_MISC, 0);
 	if (!misc_item_category) {
 		fputs("MY Error : Failed to convert misc_item category to string\n", stderr);
 		return (0);

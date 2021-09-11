@@ -1,7 +1,7 @@
 #ifndef DEF_IS_SAME_MAP_ITEM
 #define DEF_IS_SAME_MAP_ITEM
 
-#include "MY_str_compare.h"
+#include "MY_string.h"
 
 #include "Map.h"
 

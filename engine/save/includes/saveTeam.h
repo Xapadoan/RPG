@@ -3,7 +3,7 @@
 
 #include <stdio.h>
 
-#include "../../character/includes/Team.h"
+#include "Team.h"
 
 #include "saveCharacter.h"
 

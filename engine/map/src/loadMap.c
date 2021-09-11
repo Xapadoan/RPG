@@ -1,5 +1,7 @@
 #include "../includes/loadMap.h"
 
+#include <stdio.h>
+
 int loadMap(Map *map, const char *map_name)
 {
 	char *map_path;

@@ -5,6 +5,7 @@ int	addPotionDataToTab(TabMenu *menu, Potion *potion)
 	TabEntry *entry;
 	Tab *tab;
 	char *potion_category;
+	char *potion_id;
 
 	tab = NULL;
 	entry = NULL;
@@ -44,25 +45,34 @@ int	addPotionDataToTab(TabMenu *menu, Potion *potion)
 	}
 
 	//Set misc content
-	entry->misc_content = (char *)calloc(1, (MY_str_len(potion->name) + 3) * sizeof(char));
+	potion_id = MY_hex2str(potion->id, 0);
+	if (!potion_id) {
+		fputs("MY Error : Failed to convert potion id to string\n", stderr);
+		return (0);
+	}
+	entry->misc_content = (char *)calloc(1, (MY_str_len(potion->name) + MY_str_len(potion_id) + 4) * sizeof(char));
 	if (!entry->misc_content) {
 		fputs("Memory Error : Failed to allocate memory for misc content\n", stderr);
 		return (0);
 	}
 	MY_str_append(entry->misc_content, potion->name);
-	potion_category = MY_hex2char(ITEM_CATEGORY_POTION);
+	potion_category = MY_hex2str(ITEM_CATEGORY_POTION, 0);
 	if (!potion_category) {
 		fputs("MY Error : Failed to convert potion category to string\n", stderr);
 		return (0);
 	}
 	MY_str_append(entry->misc_content, ";");
 	MY_str_append(entry->misc_content, potion_category);
+	MY_str_append(entry->misc_content, ";");
+	MY_str_append(entry->misc_content, potion_id);
 	free(potion_category);
+	free(potion_id);
 
 	//Set hoverAction
 	entry->hoverAction = (FnctPtr)loadItemDescription;
 
 	//Set triggerAction
+	entry->triggerAction = (FnctPtr)exchangePotion;
 	
 	//Put at the end of tab
 	if (!addEntryToTab(entry, tab, tab->nb_entries)) {

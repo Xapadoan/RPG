@@ -6,20 +6,16 @@
 #include <SDL/SDL.h>
 #include <SDL/SDL_ttf.h>
 
-#include "../../../includes/config/menu.h"
-#include "../../../includes/config/font.h"
+#include "menu.h"
+#include "font.h"
 
-#include "../../../lib/libMY/libMY_string/includes/MY_str_split.h"
-#include "../../../lib/libMY/libMY_string/includes/MY_str_capitalize.h"
-#include "../../../lib/libMY/libMY_string/includes/MY_str_len.h"
-#include "../../../lib/libMY/libMY_string/includes/MY_str_ncopy.h"
-#include "../../../lib/libMY/libMY_string/includes/MY_replace_char.h"
-#include "../../../lib/libMY/libMY_array/includes/MY_free_2d_char.h"
+#include "MY_string.h"
+#include "MY_array.h"
 
 #include "TabMenu.h"
 #include "putItemPreview.h"
 
-#include "../../font/includes/putFontCenter.h"
+#include "putFontCenter.h"
 
 int			loadItemDescription(TabEntry *self, TabMenu *menu);
 

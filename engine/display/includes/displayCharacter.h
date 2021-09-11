@@ -5,8 +5,8 @@
 #include <stdlib.h>
 #include <SDL/SDL.h>
 
-#include "MY_is_pair.h"
-#include "MY_replace_char.h"
+#include "MY_int.h"
+#include "MY_string.h"
 
 #include "loadCharacterSprite.h"
 

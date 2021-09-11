@@ -5,16 +5,13 @@ CC_FLAGS=-g\
 				 -Werror\
 				 -c\
 				 -iquote includes\
-				 -iquote ../../lib/libMY/libMY_string/includes\
+				 -iquote ../../lib/libMY\
 				 -iquote ../../includes/config\
 				 -iquote ../display/includes\
 				 -iquote ../character/includes\
 				 -iquote ../map/includes\
 				 -iquote ../location/includes\
 				 -iquote ../hitbox/includes\
-				 -iquote ../../lib/libMY/libMY_int/includes\
-				 -iquote ../../lib/libMY/libMY_array/includes\
-				 -iquote ../../lib/libMY/libMY_file/includes
 
 OBJ=addCopyToPotionBag.o\
 		addToPotionBag.o\
@@ -33,6 +30,7 @@ OBJ=addCopyToPotionBag.o\
 		deletePotionBag.o\
 		deleteWeapon.o\
 		deleteWeaponBag.o\
+		exchangePotion.o\
 		initArmor.o\
 		initArmorBag.o\
 		initBook.o\
@@ -63,8 +61,7 @@ addCopyToPotionBag.o: src/addCopyToPotionBag.c\
 	includes/initPotion.h\
 	includes/addToPotionBag.h\
 	../../includes/config/item.h\
-	../../lib/libMY/libMY_string/includes/MY_str_ncopy.h\
-	../../lib/libMY/libMY_string/includes/MY_str_len.h
+	../../lib/libMY/MY_string.h
 	$(CC) $(CC_FLAGS) $< -o $@
 addToPotionBag.o: src/addToPotionBag.c\
 	includes/addToPotionBag.h\
@@ -144,6 +141,10 @@ deleteWeaponBag.o: src/deleteWeaponBag.c\
 	includes/deleteWeaponBag.h\
 	includes/Weapon.h\
 	includes/deleteWeapon.h
+	$(CC) $(CC_FLAGS) $< -o $@
+exchangePotion.o: src/exchangePotion.c\
+	includes/exchangePotion.h\
+	includes/initPotionBag.h
 	$(CC) $(CC_FLAGS) $< -o $@
 initArmor.o: src/initArmor.c\
 	includes/initArmor.h\
@@ -226,16 +227,15 @@ loadItemBag.o: src/loadItemBag.c\
 	includes/loadPotionBag.h\
 	includes/item_categories.h\
 	../../includes/config/item.h\
-	../../lib/libMY/libMY_file/includes/MY_go_to_next_line.h
+	../../lib/libMY/MY_file.h
 	$(CC) $(CC_FLAGS) $< -o $@
 loadItemContainerItems.o: src/loadItemContainerItems.c\
 	includes/loadItemContainerItems.h\
 	includes/loadItemBag.h\
 	../../includes/config/map_item.h\
 	../../includes/config/map.h\
-	../../lib/libMY/libMY_string/includes/MY_str_len.h\
-	../../lib/libMY/libMY_string/includes/MY_str_append.h\
-	../../lib/libMY/libMY_int/includes/MY_hex2char.h\
+	../../lib/libMY/MY_string.h\
+	../../lib/libMY/MY_convert.h\
 	../map/includes/Map.h\
 	../map/includes/isItemContainer.h
 	$(CC) $(CC_FLAGS) $< -o $@
@@ -244,14 +244,12 @@ loadPotionBag.o: src/loadPotionBag.c\
 	includes/initPotion.h\
 	includes/setPotionData.h\
 	includes/addCopyToPotionBag.h\
-	../../lib/libMY/libMY_string/includes/MY_str_capitalize.h\
-	../../lib/libMY/libMY_string/includes/MY_str_len.h
+	../../lib/libMY/MY_string.h
 	$(CC) $(CC_FLAGS) $< -o $@
 setPotionData.o: src/setPotionData.c\
 	includes/setPotionData.h\
 	includes/potionEffects.h\
 	includes/linkPotionAction.h\
-	../../lib/libMY/libMY_array/includes/MY_free_2d_char.h\
-	../../lib/libMY/libMY_string/includes/MY_str_compare.h\
-	../../lib/libMY/libMY_string/includes/MY_str_split.h
+	../../lib/libMY/MY_array.h\
+	../../lib/libMY/MY_string.h
 	$(CC) $(CC_FLAGS) $< -o $@

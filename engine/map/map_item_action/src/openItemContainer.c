@@ -29,6 +29,10 @@ int	openItemContainer(MapItem *self, Map *map, Team *team, SDL_Surface *screen, 
 		return (0);
 	}
 
+	//Set Refs
+	menu->refs[0] = team;
+	menu->refs[1] = self;
+
 	//Set TabMenu dimensions
 	if (!setTabMenuWidth(menu, background->w / 2)) {
 		fputs("Error : Failed to set menu width\n", stderr);
@@ -80,7 +84,7 @@ int	openItemContainer(MapItem *self, Map *map, Team *team, SDL_Surface *screen, 
 				exit(EXIT_SUCCESS);
 				break;
 			case (SDL_KEYUP) :
-				if (!handleTabMenuEvent(menu, &(event.key), &quit)) {
+				if (!handleItemExchangeMenuEvent(menu, &(event.key), &quit)) {
 					fputs("Error : Failed to handle tab menu event\n", stderr);
 					return (0);
 				}

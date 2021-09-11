@@ -4,10 +4,15 @@ int	displayMap(SDL_Surface *screen, Map *map, Team *team)
 {
 	SDL_Rect view;
 	SDL_Rect pos;
+	SDL_Rect blit;
 	SpriteList *foreground;
 
 	foreground = NULL;
 
+	blit.x = 0;
+	blit.y = 0;
+	blit.w = SCREEN_SIZE_WIDTH;
+	blit.h = SCREEN_SIZE_HEIGHT;
 	//Sets the position of the character
 	pos.w = CHARACTER_SPRITE_SIZE_WIDTH;
 	pos.h = CHARACTER_SPRITE_SIZE_HEIGHT;
@@ -42,7 +47,7 @@ int	displayMap(SDL_Surface *screen, Map *map, Team *team)
 	else if (view.y > map->background->h - SCREEN_SIZE_HEIGHT)
 		view.y = map->background->h - SCREEN_SIZE_HEIGHT;
 
-	SDL_BlitSurface(map->background, &view, screen, NULL);
+	SDL_BlitSurface(map->background, &view, screen, &blit);
 	pos.x -= view.x;
 	pos.y -= view.y;
 
@@ -79,7 +84,6 @@ int	displayMap(SDL_Surface *screen, Map *map, Team *team)
 			return (0);
 		}
 	}
-
 	if (foreground)
 		displaySpriteList(screen, foreground, &view);
 

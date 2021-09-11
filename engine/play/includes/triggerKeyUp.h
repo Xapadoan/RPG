@@ -1,12 +1,12 @@
 #ifndef DEF_TRIGGER_KEY_UP
 #define DEF_TRIGGER_KEY_UP
 
-#include "../../../includes/config/controls.h"
+#include "controls.h"
 
 #include <SDL/SDL.h>
 
-#include "../../map/includes/Map.h"
-#include "../../character/includes/Team.h"
+#include "Map.h"
+#include "Team.h"
 
 #include "triggerAction.h"
 

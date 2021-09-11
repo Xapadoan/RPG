@@ -12,7 +12,7 @@ int	setPotionData(Potion *potion)
 		return (0);
 	}
 
-	while (*(splitted_name[nb_words++]) != '\0');
+	while (splitted_name[nb_words++] != NULL);
 
 	switch (nb_words) {
 		case (3) :

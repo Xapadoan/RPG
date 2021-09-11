@@ -8,9 +8,7 @@
 #include <SDL/SDL.h>
 #include <SDL/SDL_image.h>
 
-#include "MY_str_len.h"
-#include "MY_str_append.h"
-#include "MY_replace_char.h"
+#include "MY_string.h"
 
 #include "Direction.h"
 

@@ -1,7 +1,43 @@
 #include <unistd.h>
-#include "handleTabMenuEvent.h"
+#include "handleItemExchangeMenuEvent.h"
 
-int	handleTabMenuEvent(TabMenu *menu, SDL_KeyboardEvent *key, unsigned int *quit) {
+int processItemAction(Tab *active_tab, TabMenu *menu) {
+	TabEntry	*entry;
+	char			**splitted_misc;
+	int				item_category;
+
+	if (!active_tab) {
+		fputs("Arg Error : Missing argument for processItemAction\n", stderr);
+		return (0);
+	}
+	entry = getDisplayTabEntry(active_tab, active_tab->current_pos);
+	if (!entry) {
+		fputs("Error : Failed to get selected entry\n", stderr);
+		return (0);
+	}
+	if (!entry->triggerAction)
+		return (1);
+	splitted_misc = MY_str_split(entry->misc_content, ";");
+	if (!splitted_misc) {
+		fputs("Error : Failed to split misc content\n", stderr);
+		return (0);
+	}
+	item_category = MY_hex2dec(splitted_misc[1]);
+	switch(item_category) {
+		case (ITEM_CATEGORY_POTION):
+			if (!((int (*)(int, PotionBag *, PotionBag *))entry->triggerAction)(MY_hex2dec(splitted_misc[2]), ((Team *)menu->refs[0])->bag->potions, ((MapItem *)menu->refs[1])->items->potions)) {
+				fputs("Error : Failed to trigger potion action\n", stderr);
+				return (0);
+			}
+			break;
+		default:
+			fputs("Warning : Unknow item category\n", stderr);
+			break;
+	}
+	return (1);
+}
+
+int	handleItemExchangeMenuEvent(TabMenu *menu, SDL_KeyboardEvent *key, unsigned int *quit) {
 	Tab *active_tab;
 
 	active_tab = NULL;

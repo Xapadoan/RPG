@@ -5,7 +5,7 @@ CC_FLAGS=-g\
 				 -Werror\
 				 -c\
 				 -iquote includes\
-				 -iquote ../../lib/libMY/libMY_string/includes
+				 -iquote ../../lib/libMY
 
 OBJ=deleteLocation.o\
 	initLocation.o\
@@ -29,7 +29,5 @@ initLocation.o: src/initLocation.c\
 setLocationMap.o: src/setLocationMap.c\
 	includes/setLocationMap.h\
 	includes/Location.h\
-	../../lib/libMY/libMY_string/includes/MY_str_len.h\
-	../../lib/libMY/libMY_string/includes/MY_clear_string.h\
-	../../lib/libMY/libMY_string/includes/MY_str_append.h
+	../../lib/libMY/MY_string.h
 	$(CC) $(CC_FLAGS) $< -o $@

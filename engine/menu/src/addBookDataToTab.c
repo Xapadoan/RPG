@@ -147,7 +147,7 @@ int	addBookDataToTab(TabMenu *menu, Book *book)
 		return (0);
 	}
 	MY_str_append(entry->misc_content, book->name);
-	book_category = MY_hex2char(ITEM_CATEGORY_BOOK);
+	book_category = MY_hex2str(ITEM_CATEGORY_BOOK, 0);
 	if (!book_category) {
 		fputs("MY Error : Failed to convert book category to string\n", stderr);
 		return (0);

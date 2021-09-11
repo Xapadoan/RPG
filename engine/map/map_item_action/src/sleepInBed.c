@@ -1,6 +1,7 @@
-#include "../includes/sleep.h"
+#include <stdio.h>
+#include "../includes/sleepInBed.h"
 
-int	sleep(MapItem *self, Map *map, Team *team, SDL_Surface *screen, char **argv)
+int	sleepInBed(MapItem *self, Map *map, Team *team, SDL_Surface *screen, char **argv)
 {
 	if (argv)
 		fputs("Notice : argument provided where none were needed\n", stderr);
@@ -86,13 +87,15 @@ int	sleepAnimation(MapItem *item, Map *map, Team *team, SDL_Surface *screen)
 	}
 
 	//Search the item in the item list
-	do {
-		fgets(sprite_name, MY_str_len(item->name) + 1, file);
-		MY_go_to_next_line(file);
-	} while (MY_str_len(sprite_name) > 1 && !MY_str_compare(item->name, sprite_name));
+	if (!searchItemInList(file, item)) {
+		fputs("Warning: failed to find bed in map item list\n", stderr);
+		return (0);
+	}
 
 	//Load Bed structure
 	fgets(sprite_name, 18, file);
+		write(1, sprite_name, MY_str_len(sprite_name));
+		write(1, "c\n", 2);
 	MY_go_to_next_line(file);
 	sprite_full = (char *)calloc(1, (MY_str_len(sprite_path) + MY_str_len(sprite_name) + 1) * sizeof(char));
 	if (!sprite_full) {

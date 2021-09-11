@@ -62,7 +62,7 @@ MapItem	*loadMapItem(FILE *file, const char *map_name)
 
 	//Simplify name
 	splitted_name = MY_str_split(name, "_");
-	while (*(splitted_name[i + 1]) != '\0')
+	while (splitted_name[i + 1] != NULL)
 		i++;
 	free(item->name);
 	item->name = MY_str_ncopy(splitted_name[i], 0, MY_str_len(splitted_name[i]));

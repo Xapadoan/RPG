@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <SDL/SDL.h>
 
-#include "MY_hex2dec.h"
+#include "MY_convert.h"
 
 #include "loadMapTexture.h"
 #include "fillRect.h"

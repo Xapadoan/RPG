@@ -8,8 +8,7 @@
 #include <SDL/SDL.h>
 #include <SDL/SDL_image.h>
 
-#include "MY_str_len.h"
-#include "MY_str_append.h"
+#include "MY_string.h"
 
 SDL_Surface *loadMapTexture(int tex);
 

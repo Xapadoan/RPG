@@ -5,7 +5,7 @@ void	loadMapLine(SDL_Surface *dest, const char *line, SDL_Rect *pos)
 	int i;
 	int j;
 	char current_bit[MAP_SIZE_BIT];
-	char cW[3];
+	char cW[4];
 
 	//Gets the width of the column
 	cW[0] = line[0];

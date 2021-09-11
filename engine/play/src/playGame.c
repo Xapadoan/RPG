@@ -1,5 +1,7 @@
 #include "../includes/playGame.h"
 
+#include <stdio.h>
+
 int	playGame(SDL_Surface *screen, Team *team)
 {
 	int quit;

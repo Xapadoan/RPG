@@ -6,8 +6,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#include "MY_str_len.h"
-#include "MY_str_append.h"
+#include "MY_string.h"
 
 FILE	*openMapItemList(const char *map_name);
 

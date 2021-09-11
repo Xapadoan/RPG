@@ -1,9 +1,9 @@
 #include "../includes/useMapByte.h"
 
 void	useMapByte(SDL_Surface *dest, const char *byte, SDL_Rect *pos){
-	char clen[3];
-	char cheight[3];
-	char ctexture[2];
+	char clen[4];
+	char cheight[4];
+	char ctexture[3];
 	SDL_Surface *texture;
 
 	texture = NULL;

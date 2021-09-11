@@ -57,6 +57,7 @@ int	sitOnChair(MapItem *self, Map *map, Team *team, SDL_Surface *screen, char **
 	}
 	MY_go_to_next_line(file);
 	fgets(sprite_name, 28, file);
+	write(1, sprite_name, 28);
 
 	//Gets the sprite's full path
 	sprite_full = (char *)calloc(1, (MY_str_len(MAP_ITEM_PATH) + MY_str_len(self->name) + 31) * sizeof(char));

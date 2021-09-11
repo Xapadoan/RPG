@@ -1,7 +1,7 @@
 #ifndef DEF_UPDATE_TAB_CONTENT
 #define DEF_UPDATE_TAB_CONTENT
 
-#include "../../../includes/config/menu.h"
+#include "menu.h"
 
 #include <stdio.h>
 

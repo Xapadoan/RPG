@@ -8,7 +8,7 @@
 #include "updateItemExchangeHeader.h"
 #include "updateItemExchangeTabsPreview.h"
 #include "updateTabContent.h"
-#include "../../map/includes/Map.h"
+#include "Map.h"
 
 int	updateItemExchangeMenu(TabMenu *menu, MapItem *container);
 

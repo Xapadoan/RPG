@@ -9,7 +9,7 @@
 #include <stdio.h>
 #include <SDL/SDL.h>
 
-#include "MY_go_to_next_line.h"
+#include "MY_file.h"
 
 #include "displayMap.h"
 #include "Team.h"

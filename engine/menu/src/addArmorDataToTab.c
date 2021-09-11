@@ -148,7 +148,7 @@ int	addArmorDataToTab(TabMenu *menu, Armor *armor)
 		return (0);
 	}
 	MY_str_append(entry->misc_content, armor->name);
-	armor_category = MY_hex2char(ITEM_CATEGORY_ARMOR);
+	armor_category = MY_hex2str(ITEM_CATEGORY_ARMOR, 0);
 	if (!armor_category) {
 		fputs("MY Error : Failed to convert armor category to string\n", stderr);
 		return (0);

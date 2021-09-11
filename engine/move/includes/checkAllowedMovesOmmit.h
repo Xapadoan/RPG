@@ -3,14 +3,14 @@
 
 #include <SDL/SDL.h>
 
-#include "../../map/includes/Map.h"
-#include "../../character/includes/Team.h"
-#include "../../hitbox/includes/initHitbox.h"
-#include "../../hitbox/includes/scanIntersection.h"
-#include "../../hitbox/includes/restrictMovements.h"
-#include "../../hitbox/includes/deleteHitbox.h"
-#include "../../hitbox/includes/mergeHitboxes.h"
-#include "../../display/includes/displayHitbox.h"
+#include "Map.h"
+#include "Team.h"
+#include "initHitbox.h"
+#include "scanIntersection.h"
+#include "restrictMovements.h"
+#include "deleteHitbox.h"
+#include "mergeHitboxes.h"
+#include "displayHitbox.h"
 
 int	checkAllowedMovesOmmit(Map *map, Team *team, int margin, MapItem *item);
 

@@ -14,7 +14,7 @@ int	loadItemContainerItems(MapItem *container, const char *map_name)
 		return (1);
 
 	//Create string container_id to store (char *)hex(container->id)
-	container_id = MY_hex2char(container->id);
+	container_id = MY_hex2str(container->id, 0);
 	if (!container_id) {
 		fputs("Error : Failed to convert hexadecimal to char\n", stderr);
 		return (0);

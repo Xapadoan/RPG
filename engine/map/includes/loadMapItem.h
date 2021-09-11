@@ -9,14 +9,9 @@
 #include <SDL/SDL_rotozoom.h>
 #include <SDL/SDL_image.h>
 
-#include "MY_str_len.h"
-#include "MY_str_append.h"
-#include "MY_str_ncopy.h"
-#include "MY_str_split.h"
-
-#include "MY_str2int.h"
-
-#include "MY_free_2d_char.h"
+#include "MY_string.h"
+#include "MY_convert.h"
+#include "MY_array.h"
 
 #include "loadHitbox.h"
 #include "Direction.h"

@@ -7,7 +7,7 @@
 #include "hashed_actions.h"
 #include "map_action_list.h"
 
-#include "MY_pow.h"
+#include "MY_int.h"
 
 void	chooseMapItemAction(MapItem *item);
 int	hashItemName(const char *name);

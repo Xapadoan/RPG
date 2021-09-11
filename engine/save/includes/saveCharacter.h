@@ -3,7 +3,7 @@
 
 #include <stdio.h>
 
-#include "../../character/includes/Character.h"
+#include "Character.h"
 
 void	saveCharacter(Character *to_save, FILE *save_file);
 

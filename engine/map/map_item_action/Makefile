@@ -9,19 +9,18 @@ CC_FLAGS=-g\
 				 -iquote ../../character/includes\
 				 -iquote ../../../includes/config\
 				 -iquote ../includes\
-				 -iquote ../../../lib/libMY/libMY_string/includes\
-				 -iquote ../../../lib/libMY/libMY_file/includes\
+				 -iquote ../../../lib/libMY\
 				 -iquote ../../display/includes\
 				 -iquote ../../location/includes\
 				 -iquote ../../hitbox/includes\
 				 -iquote ../../item/includes\
 				 -iquote ../../font/includes\
 				 -iquote ../../move/includes\
-				 -iquote ../../../lib/libMY/libMY_int/includes\
+				 -iquote ../../includes
 
 OBJ=openItemContainer.o\
 	sitOnChair.o\
-	sleep.o
+	sleepInBed.o
 
 all: $(OBJ)
 
@@ -45,7 +44,7 @@ openItemContainer.o: src/openItemContainer.c\
 	../../menu/includes/updateItemExchangeMenu.h\
 	../../menu/includes/createItemExchangeTabs.h\
 	../../menu/includes/loadItemExchangeMenuContent.h\
-	../../menu/includes/handleTabMenuEvent.h
+	../../menu/includes/handleItemExchangeMenuEvent.h
 	$(CC) $(CC_FLAGS) $< -o $@
 sitOnChair.o: src/sitOnChair.c\
 	includes/sitOnChair.h\
@@ -53,7 +52,7 @@ sitOnChair.o: src/sitOnChair.c\
 	../../../includes/config/character_sprite.h\
 	../../../includes/config/map_item_sprite_mark.h\
 	../../../includes/config/map_item.h\
-	../../../lib/libMY/libMY_file/includes/MY_go_to_next_line.h\
+	../../../lib/libMY/MY_file.h\
 	../../display/includes/displayMap.h\
 	../../character/includes/Team.h\
 	../../character/includes/changeTeamState.h\
@@ -62,15 +61,13 @@ sitOnChair.o: src/sitOnChair.c\
 	../includes/searchItemInList.h\
 	../../location/includes/Direction.h
 	$(CC) $(CC_FLAGS) $< -o $@
-sleep.o: src/sleep.c\
-	includes/sleep.h\
+sleepInBed.o: src/sleepInBed.c\
+	includes/sleepInBed.h\
 	../../../includes/config/map_item.h\
 	../../../includes/config/character_sprite.h\
 	../../../includes/config/screen.h\
-	../../../lib/libMY/libMY_string/includes/MY_str_len.h\
-	../../../lib/libMY/libMY_string/includes/MY_str_append.h\
-	../../../lib/libMY/libMY_string/includes/MY_str_compare.h\
-	../../../lib/libMY/libMY_file/includes/MY_go_to_next_line.h\
+	../../../lib/libMY/MY_string.h\
+	../../../lib/libMY/MY_file.h\
 	../../character/includes/Team.h\
 	../../character/includes/updateTeam.h\
 	../../character/includes/maxCureTeam.h\
@@ -78,6 +75,7 @@ sleep.o: src/sleep.c\
 	../../location/includes/Direction.h\
 	../../display/includes/displayMapItems.h\
 	../includes/Map.h\
+	../includes/searchItemInList.h\
 	../includes/openMapItemList.h
 	$(CC) $(CC_FLAGS) $< -o $@
 

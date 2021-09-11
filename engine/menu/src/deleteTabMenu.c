@@ -2,6 +2,9 @@
 
 void	deleteTabMenu(TabMenu *menu)
 {
+	int	i;
+
+	i = 0;
 	if (menu->menu_surface)
 		SDL_FreeSurface(menu->menu_surface);
 
@@ -13,6 +16,9 @@ void	deleteTabMenu(TabMenu *menu)
 
 	if (menu->tab_content)
 		SDL_FreeSurface(menu->tab_content);
+
+	while (i < 5)
+		menu->refs[i++] = NULL;
 
 	if (menu->tabs)
 		deleteTabList(menu->tabs);

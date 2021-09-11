@@ -3,7 +3,9 @@
 TabMenu	*initTabMenu(void)
 {
 	TabMenu *menu;
+	int			i;
 
+	i = 0;
 	menu = NULL;
 	menu = malloc(sizeof(*menu));
 	if (!menu) {
@@ -41,6 +43,9 @@ TabMenu	*initTabMenu(void)
 	menu->event_pos.w = 0;
 	menu->event_pos.h = 0;
 	menu->event_surface = NULL;
+
+	while (i < 5)
+		menu->refs[i++] = NULL;
 
 	menu->tabs = initTabList();
 	if (!menu->tabs) {

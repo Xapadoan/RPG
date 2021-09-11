@@ -5,20 +5,18 @@ CC_FLAGS=-g\
 				 -Werror\
 				 -c\
 				 -iquote includes\
-				 -iquote ../../lib/libMY/libMY_string/includes\
+				 -iquote ../../lib/libMY\
 				 -iquote ../hitbox/includes\
 				 -iquote ../../includes/config\
-				 -iquote ../../lib/libMY/libMY_int/includes\
 				 -iquote ../item/includes\
 				 -iquote map_item_action/includes\
-				 -iquote ../../lib/libMY/libMY_file/includes\
 				 -iquote ../display/includes\
-				 -iquote ../../lib/libMY/libMY_array/includes\
 				 -iquote ../character/includes\
 				 -iquote ../location/includes\
 				 -iquote ../move/includes\
 				 -iquote ../menu/includes\
-				 -iquote ../font/includes
+				 -iquote ../font/includes\
+				 -iquote ../includes
 
 OBJ=addToMapBag.o\
 		chooseMapItemAction.o\
@@ -63,7 +61,7 @@ chooseMapItemAction.o: src/chooseMapItemAction.c\
 	includes/Map.h\
 	map_item_action/includes/hashed_actions.h\
 	map_item_action/includes/map_action_list.h\
-	../../lib/libMY/libMY_int/includes/MY_pow.h
+	../../lib/libMY/MY_int.h
 	$(CC) $(CC_FLAGS) $< -o $@
 copyToMapBag.o: src/copyToMapBag.c\
 	includes/copyToMapBag.h\
@@ -72,8 +70,7 @@ copyToMapBag.o: src/copyToMapBag.c\
 	includes/initMapItem.h\
 	includes/deleteMapItem.h\
 	../../includes/config/map_item.h\
-	../../lib/libMY/libMY_string/includes/MY_str_len.h\
-	../../lib/libMY/libMY_string/includes/MY_str_ncopy.h\
+	../../lib/libMY/MY_string.h\
 	../hitbox/includes/Hitbox.h\
 	../hitbox/includes/initHitbox.h\
 	../hitbox/includes/copyToHitbox.h
@@ -125,7 +122,7 @@ isItemContainer.o: src/isItemContainer.c\
 isSameMapItem.o: src/isSameMapItem.c\
 	includes/isSameMapItem.h\
 	includes/Map.h\
-	../../lib/libMY/libMY_string/includes/MY_str_compare.h
+	../../lib/libMY/MY_string.h
 	$(CC) $(CC_FLAGS) $< -o $@
 loadMap.o: src/loadMap.c\
 	includes/loadMap.h\
@@ -144,7 +141,7 @@ loadMapBag.o: src/loadMapBag.c\
 	includes/loadMapItem.h\
 	includes/addToMapBag.h\
 	includes/openMapItemList.h\
-	../../lib/libMY/libMY_file/includes/MY_go_to_next_line.h
+	../../lib/libMY/MY_file.h
 	$(CC) $(CC_FLAGS) $< -o $@
 loadMapItem.o: src/loadMapItem.c\
 	includes/loadMapItem.h\
@@ -154,12 +151,9 @@ loadMapItem.o: src/loadMapItem.c\
 	includes/chooseMapItemAction.h\
 	includes/isItemContainer.h\
 	../../includes/config/map_item.h\
-	../../lib/libMY/libMY_string/includes/MY_str_len.h\
-	../../lib/libMY/libMY_string/includes/MY_str_append.h\
-	../../lib/libMY/libMY_string/includes/MY_str_ncopy.h\
-	../../lib/libMY/libMY_string/includes/MY_str_split.h\
-	../../lib/libMY/libMY_int/includes/MY_str2int.h\
-	../../lib/libMY/libMY_array/includes/MY_free_2d_char.h\
+	../../lib/libMY/MY_string.h\
+	../../lib/libMY/MY_convert.h\
+	../../lib/libMY/MY_array.h\
 	../hitbox/includes/loadHitbox.h\
 	../location/includes/Direction.h\
 	../item/includes/loadItemContainerItems.h
@@ -168,7 +162,7 @@ loadMapLine.o: src/loadMapLine.c\
 	includes/loadMapLine.h\
 	includes/useMapByte.h\
 	../../includes/config/map.h\
-	../../lib/libMY/libMY_int/includes/MY_hex2dec.h
+	../../lib/libMY/MY_convert.h
 	$(CC) $(CC_FLAGS) $< -o $@
 loadMapStructures.o: src/loadMapStructures.c\
 	includes/loadMapStructures.h\
@@ -177,14 +171,12 @@ loadMapStructures.o: src/loadMapStructures.c\
 loadMapTexture.o: src/loadMapTexture.c\
 	includes/loadMapTexture.h\
 	../../includes/config/textures_path.h\
-	../../lib/libMY/libMY_string/includes/MY_str_len.h\
-	../../lib/libMY/libMY_string/includes/MY_str_append.h
+	../../lib/libMY/MY_string.h
 	$(CC) $(CC_FLAGS) $< -o $@
 loadStructureSprite.o: src/loadStructureSprite.c\
 	includes/loadStructureSprite.h\
 	../../includes/config/struct_sprite.h\
-	../../lib/libMY/libMY_string/includes/MY_str_len.h\
-	../../lib/libMY/libMY_string/includes/MY_str_append.h
+	../../lib/libMY/MY_string.h
 	$(CC) $(CC_FLAGS) $< -o $@
 loadYMap.o: src/loadYMap.c\
 	includes/loadYMap.h\
@@ -194,17 +186,16 @@ loadYMap.o: src/loadYMap.c\
 openMapItemList.o: src/openMapItemList.c\
 	includes/openMapItemList.h\
 	../../includes/config/map.h\
-	../../lib/libMY/libMY_string/includes/MY_str_len.h\
-	../../lib/libMY/libMY_string/includes/MY_str_append.h
+	../../lib/libMY/MY_string.h
 	$(CC) $(CC_FLAGS) $< -o $@
 searchItemInList.o: src/searchItemInList.c\
 	includes/searchItemInList.h\
 	includes/Map.h\
-	../../lib/libMY/libMY_file/includes/MY_go_to_next_line.h
+	../../lib/libMY/MY_file.h
 	$(CC) $(CC_FLAGS) $< -o $@
 useMapByte.o: src/useMapByte.c\
 	includes/useMapByte.h\
 	includes/loadMapTexture.h\
-	../../lib/libMY/libMY_int/includes/MY_hex2dec.h\
+	../../lib/libMY/MY_int.h\
 	../display/includes/fillRect.h
 	$(CC) $(CC_FLAGS) $< -o $@

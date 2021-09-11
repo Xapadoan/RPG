@@ -10,7 +10,7 @@
 #include "restrictMovements.h"
 #include "getHitboxDimensions.h"
 
-#include "MY_MIN.h"
+#include "MY_int.h"
 
 #include "Team.h"
 

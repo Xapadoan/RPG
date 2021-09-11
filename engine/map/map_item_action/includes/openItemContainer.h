@@ -16,7 +16,7 @@
 #include "updateItemExchangeMenu.h"
 #include "createItemExchangeTabs.h"
 #include "loadItemExchangeMenuContent.h"
-#include "handleTabMenuEvent.h"
+#include "handleItemExchangeMenuEvent.h"
 
 int	openItemContainer(MapItem *self, Map *map, Team *team, SDL_Surface *screen, char **argv);
 

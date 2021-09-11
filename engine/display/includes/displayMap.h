@@ -9,8 +9,8 @@
 #include <stdlib.h>
 #include <SDL/SDL.h>
 
-#include "MY_str_len.h"
-#include "MY_str_append.h"
+#include "MY_string.h"
+#include "MY_int.h"
 
 #include "Team.h"
 #include "Map.h"

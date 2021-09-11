@@ -7,10 +7,8 @@
 #include "map_item.h"
 #include "map.h"
 
-#include "MY_str_len.h"
-#include "MY_str_append.h"
-
-#include "MY_hex2char.h"
+#include "MY_string.h"
+#include "MY_convert.h"
 
 #include "Map.h"
 #include "isItemContainer.h"

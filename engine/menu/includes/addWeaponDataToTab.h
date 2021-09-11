@@ -6,10 +6,8 @@
 #include <SDL/SDL.h>
 #include <SDL/SDL_ttf.h>
 
-#include "MY_str_len.h"
-#include "MY_str_append.h"
-#include "MY_hex2char.h"
-#include "MY_dec2str.h"
+#include "MY_string.h"
+#include "MY_convert.h"
 
 #include "TabMenu.h"
 #include "tab_ids.h"
@@ -21,6 +19,7 @@
 #include "menu.h"
 #include "font.h"
 #include "putFont.h"
+#include "exchangePotion.h"
 
 int		addWeaponDataToTab(TabMenu *menu, Weapon *weapon);
 

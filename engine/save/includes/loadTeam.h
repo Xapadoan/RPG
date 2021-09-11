@@ -3,8 +3,8 @@
 
 #include <stdio.h>
 
-#include "../../character/includes/Team.h"
-#include "../../character/includes/loadCharacterSprite.h"
+#include "Team.h"
+#include "loadCharacterSprite.h"
 
 #include "loadCharacter.h"
 

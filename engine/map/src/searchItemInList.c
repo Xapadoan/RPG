@@ -5,6 +5,8 @@ int	searchItemInList(FILE *file, MapItem *item)
 	int x;
 	int y;
 	int nb_sprite;
+	char line[200];
+
 
 	x = 0;
 	y = 0;
@@ -16,7 +18,7 @@ int	searchItemInList(FILE *file, MapItem *item)
 
 	rewind(file);
 
-	while (fscanf(file, "%*s\t%x\t%*x\t%x\t%*x\t%*s\t%d\n", &x, &y, &nb_sprite) != EOF\
+	while (fscanf(file, "%*x\t%s\t%x\t%*x\t%x\t%*x\t%*s\t%d", line, &x, &y, &nb_sprite) != EOF
 			&& !(item->pos.x == x && item->pos.y == y)) {
 		while (nb_sprite-- > 0)
 			MY_go_to_next_line(file);

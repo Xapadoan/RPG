@@ -8,12 +8,14 @@ CC_FLAGS=-g\
 				 -iquote ../location/includes\
 				 -iquote ../map/includes\
 				 -iquote ../hitbox/includes\
+				 -iquote ../display/includes\
+				 -iquote ../font/includes\
 				 -iquote ../../includes/config\
-				 -iquote ../../lib/libMY/libMY_string/includes\
+				 -iquote ../../lib/libMY\
 				 -iquote ../item/includes\
 				 -iquote ../../menu/character_creation/includes\
-				 -iquote ../../lib/libMY/libMY_int/includes\
 				 -iquote ../move/includes\
+				 -iquote ../includes
 
 OBJ=changeTeamState.o\
 		createTeam.o\
@@ -98,7 +100,7 @@ isFacingMapItem.o: src/isFacingMapItem.c\
 	../map/includes/Map.h\
 	../hitbox/includes/restrictMovements.h\
 	../hitbox/includes/getHitboxDimensions.h\
-	../../lib/libMY/libMY_int/includes/MY_MIN.h
+	../../lib/libMY/MY_int.h
 	$(CC) $(CC_FLAGS) $< -o $@
 loadBaseStats.o: src/loadBaseStats.c\
 	includes/loadBaseStats.h\
@@ -110,9 +112,7 @@ loadCharacterSprite.o: src/loadCharacterSprite.c\
 	includes/Character.h\
 	includes/Race.h\
 	../../includes/config/character_sprite.h\
-	../../lib/libMY/libMY_string/includes/MY_str_len.h\
-	../../lib/libMY/libMY_string/includes/MY_str_append.h\
-	../../lib/libMY/libMY_string/includes/MY_replace_char.h\
+	../../lib/libMY/MY_string.h\
 	../location/includes/Direction.h
 	$(CC) $(CC_FLAGS) $< -o $@
 maxCureTeam.o: src/maxCureTeam.c\
@@ -124,7 +124,7 @@ putClosedEyes.o: src/putClosedEyes.c\
 	../../includes/config/character_sprite.h\
 	includes/Character.h\
 	includes/Race.h\
-	../../lib/libMY/libMY_string/includes/MY_str_append.h
+	../../lib/libMY/MY_string.h
 	$(CC) $(CC_FLAGS) $< -o $@
 searchStandUpPos.o: src/searchStandUpPos.c\
 	includes/searchStandUpPos.h\

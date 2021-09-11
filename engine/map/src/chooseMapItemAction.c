@@ -7,7 +7,7 @@ void	chooseMapItemAction(MapItem *item)
 	hashed = hashItemName(item->name);
 	switch (hashed) {
 		case (BED) :
-			item->action = &sleep;
+			item->action = &sleepInBed;
 			break;
 		case (TABLE) :
 			item->action = NULL;

@@ -6,19 +6,15 @@
 #include <SDL/SDL.h>
 #include <SDL/SDL_image.h>
 
-#include "../../../includes/config/menu.h"
-#include "../../../includes/config/item.h"
+#include "menu.h"
+#include "item.h"
 
-#include "../../item/includes/item_categories.h"
+#include "item_categories.h"
 
-#include "../../../lib/libMY/libMY_string/includes/MY_str_len.h"
-#include "../../../lib/libMY/libMY_string/includes/MY_str_append.h"
-#include "../../../lib/libMY/libMY_string/includes/MY_str_split.h"
-
-#include "../../../lib/libMY/libMY_int/includes/MY_pow.h"
-#include "../../../lib/libMY/libMY_int/includes/MY_str2hex.h"
-
-#include "../../../lib/libMY/libMY_array/includes/MY_free_2d_char.h"
+#include "MY_string.h"
+#include "MY_int.h"
+#include "MY_convert.h"
+#include "MY_array.h"
 
 int	putItemPreview(SDL_Surface *dest, const char *item_str);
 

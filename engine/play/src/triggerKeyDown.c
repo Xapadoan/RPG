@@ -9,7 +9,7 @@ int	triggerKeyDown(Map *map, Team *team, SDL_KeyboardEvent *event)
 		case (CONTROLS_MOVEMENT_LEFT) :
 		case (CONTROLS_MOVEMENT_RIGHT) :
 			if (!handleMovement(map, team, event)) {
-				fputs(stderr, "Warning : Failed to handle movement\n");
+				fputs("Warning : Failed to handle movement\n", stderr);
 				return (0);
 			}
 			break;

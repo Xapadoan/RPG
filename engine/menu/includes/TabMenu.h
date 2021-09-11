@@ -22,6 +22,8 @@ typedef struct TabMenu {
 
 	SDL_Surface *event_surface;
 	SDL_Rect event_pos;
+
+	void *refs[5];
 } TabMenu;
 
 typedef struct TabList {

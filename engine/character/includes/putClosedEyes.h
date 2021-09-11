@@ -12,7 +12,7 @@
 #include "Character.h"
 #include "Race.h"
 
-#include "MY_str_append.h"
+#include "MY_string.h"
 
 int	putClosedEyes(Character *character, SDL_Surface *surf, SDL_Rect *character_pos);
 

@@ -10,11 +10,8 @@
 #include <SDL/SDL.h>
 #include <SDL/SDL_image.h>
 
-#include "MY_str_len.h"
-#include "MY_str_append.h"
-#include "MY_str_compare.h"
-
-#include "MY_go_to_next_line.h"
+#include "MY_string.h"
+#include "MY_file.h"
 
 #include "Team.h"
 #include "updateTeam.h"
@@ -24,8 +21,9 @@
 #include "displayMapItems.h"
 #include "Map.h"
 #include "openMapItemList.h"
+#include "searchItemInList.h"
 
-int	sleep(MapItem *self, Map *map, Team *team, SDL_Surface *screen, char **argv);
+int	sleepInBed(MapItem *self, Map *map, Team *team, SDL_Surface *screen, char **argv);
 int	sleepAnimation(MapItem *item, Map *map, Team *team, SDL_Surface *screen);
 
 #endif
