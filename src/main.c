@@ -41,8 +41,10 @@ int	main(void)
 				Mix_FreeMusic(music);
 				EXIT_INIT();
 			}
+			printf("Main: saveTeam");
 			if (!saveTeam(&team, "save/save_01.save"))
 				fputs ("Warning : Saving game failed\n", stderr);
+			printf("Main Saved Team");
 			break;
 		case (2) :
 			if (!loadTeam(&team, "save/save_01.save")) {

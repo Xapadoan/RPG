@@ -10,21 +10,21 @@
 #include <SDL/SDL_image.h>
 #include <SDL/SDL_ttf.h>
 
-#include "../engine/character/includes/initTeam.h"
-#include "../engine/character/includes/deleteTeam.h"
-#include "../engine/character/includes/createTeam.h"
-#include "../engine/character/includes/Team.h"
+#include "initTeam.h"
+#include "deleteTeam.h"
+#include "createTeam.h"
+#include "Team.h"
 
-#include "../engine/includes/initEngine.h"
-#include "../engine/includes/endSDL.h"
-#include "../engine/music/includes/startPlayingMusic.h"
-#include "../engine/music/includes/stopPlayingMusic.h"
-#include "../engine/save/includes/saveTeam.h"
-#include "../engine/save/includes/loadTeam.h"
+#include "initEngine.h"
+#include "endSDL.h"
+#include "startPlayingMusic.h"
+#include "stopPlayingMusic.h"
+#include "saveTeam.h"
+#include "loadTeam.h"
 
-#include "../engine/play/includes/playGame.h"
+#include "playGame.h"
 
-#include "../menu/main_menu/includes/useMainMenu.h"
+#include "useMainMenu.h"
 
 #define EXIT_INIT()	deleteTeam(&team);\
 			endSDL();\
