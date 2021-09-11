@@ -2,3 +2,4 @@ resource
 *.o
 *.vscode
 a.out
+/save/*.save
