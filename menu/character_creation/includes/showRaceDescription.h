@@ -1,7 +1,7 @@
 #ifndef DEF_SHOW_RACE_DESCRIPTION
 #define DEF_SHOW_RACE_DESCRIPTION
 
-#include "../../../includes/config/character_menu.h"
+#include "character_menu.h"
 
 #include <SDL/SDL.h>
 #include <SDL/SDL_ttf.h>

@@ -1,8 +1,8 @@
 #ifndef DEF_PUT_CCM_BOXES
 #define DEF_PUT_CCM_BOXES
 
-#include "../../../includes/config/character_menu.h"
-#include "../../../includes/config/font.h"
+#include "character_menu.h"
+#include "font.h"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -17,7 +17,7 @@
 #include "putConfirm.h"
 #include "putUserInfo.h"
 
-#include "../../../lib/libMY/libMY_string/includes/MY_str_len.h"
+#include "MY_string.h"
 
 int	putCCMBoxes(SDL_Surface *screen, SDL_Surface *menu, Character team[4], const unsigned int i, const unsigned int choice);
 

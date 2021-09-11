@@ -1,8 +1,8 @@
 #ifndef DEF_CHOOSE_RACE
 #define DEF_CHOOSE_RACE
 
-#include "../../../includes/config/character_menu.h"
-#include "../../../includes/config/font.h"
+#include "character_menu.h"
+#include "font.h"
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -13,7 +13,7 @@
 #include "showRaceDescription.h"
 #include "useRaceMenu.h"
 #include "putRaces.h"
-#include "../../../engine/includes/endSDL.h"
+#include "endSDL.h"
 
 #define FREE_RACE() SDL_FreeSurface(background);\
 		SDL_FreeSurface(select);\

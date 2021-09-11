@@ -5,7 +5,7 @@
 #include <SDL/SDL.h>
 #include <SDL/SDL_ttf.h>
 
-#include "../../../engine/font/includes/putFont.h"
+#include "putFont.h"
 
 int	putYesNo(SDL_Surface *dest, TTF_Font *font, SDL_Color color);
 

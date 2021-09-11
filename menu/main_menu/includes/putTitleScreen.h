@@ -7,10 +7,10 @@
 #include <SDL/SDL_image.h>
 #include <SDL/SDL_ttf.h>
 
-#include "../../../includes/config/font.h"
-#include "../../../includes/config/art.h"
+#include "font.h"
+#include "art.h"
 
-#include "../../../engine/font/includes/putFontCenter.h"
+#include "putFontCenter.h"
 
 int	putTitleScreen(SDL_Surface *screen);
 

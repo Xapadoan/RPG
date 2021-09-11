@@ -1,8 +1,8 @@
 #ifndef DEF_PUT_CHARACTER_PREVIEW
 #define DEF_PUT_CHARACTER_PREVIEW
 
-#include "../../../includes/config/character_sprite.h"
-#include "../../../includes/config/character_menu.h"
+#include "character_sprite.h"
+#include "character_menu.h"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -10,11 +10,11 @@
 #include <SDL/SDL_image.h>
 #include <SDL/SDL_ttf.h>
 
-#include "../../../engine/character/includes/Character.h"
-#include "../../../engine/character/includes/Race.h"
-#include "../../../engine/font/includes/putFont.h"
+#include "Character.h"
+#include "Race.h"
+#include "putFont.h"
 
-#include "../../../lib/libMY/libMY_string/includes/MY_str_len.h"
+#include "MY_string.h"
 
 int	putCharacterPreview(SDL_Surface *dest, TTF_Font *font, Character *character, SDL_Rect *pos);
 

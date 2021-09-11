@@ -1,9 +1,9 @@
 #ifndef DEF_WRITE_NAME
 #define DEF_WRITE_NAME
 
-#include "../../../includes/config/font.h"
-#include "../../../includes/config/character_menu.h"
-#include "../../../includes/config/character.h"
+#include "font.h"
+#include "character_menu.h"
+#include "character.h"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -11,9 +11,9 @@
 #include <SDL/SDL_ttf.h>
 #include <SDL/SDL_image.h>
 
-#include "../../../lib/libMY/libMY_string/includes/MY_str_len.h"
+#include "MY_string.h"
 
-#include "../../../engine/font/includes/putFont.h"
+#include "putFont.h"
 
 int	writeName(SDL_Surface *dest, char *name);
 void	addLetter(char *name, unsigned int *lengthName, SDL_KeyboardEvent *key);

@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#include "../../../engine/includes/endSDL.h"
+#include "endSDL.h"
 
 #include "putMainChoices.h"
 #include "moveMainCursor.h"

@@ -6,9 +6,9 @@
 
 #include "putMainChoices.h"
 
-#include "../../../engine/includes/endSDL.h"
+#include "endSDL.h"
 
-#include "../../../includes/config/interface_sprite.h"
+#include "interface_sprite.h"
 
 int	moveMainCursor(SDL_Surface *menu, SDL_Surface *screen, int *choice);
 int	testPosMainCursor(SDL_Surface *menu, SDL_Rect *pos);

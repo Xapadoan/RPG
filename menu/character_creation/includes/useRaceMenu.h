@@ -1,7 +1,7 @@
 #ifndef DEF_USE_RACE_MENU
 #define DEF_USE_RACE_MENU
 
-#include "../../../includes/config/character_menu.h"
+#include "character_menu.h"
 
 #include <SDL/SDL.h>
 
