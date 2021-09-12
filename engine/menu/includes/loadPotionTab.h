@@ -7,6 +7,7 @@
 #include "TabMenu.h"
 #include "addPotionDataToTab.h"
 #include "Potion.h"
+#include "tab_ids.h"
 
 int	loadPotionTab(TabMenu *menu, PotionBag *potions);
 

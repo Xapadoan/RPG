@@ -4,7 +4,9 @@
 #include <stdio.h>
 
 #include "initPotionBag.h"
+#include "addPotionToBag.h"
+#include "removePotionFromBag.h"
 
-int	exchangePotion(Potion *potion, PotionBag *src_bag, PotionBag *dst_bag);
+int	exchangePotion(unsigned int potion_id, PotionBag *src_bag, PotionBag *dst_bag);
 
 #endif

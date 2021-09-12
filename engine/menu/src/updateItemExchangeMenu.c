@@ -27,5 +27,10 @@ int updateItemExchangeMenu(TabMenu *menu, MapItem *container)
 		return (0);
 	}
 
+	if (!updateItemExchangeTab(menu)) {
+		fputs("Error : Failed to update tab\n", stderr);
+		return (0);
+	}
+
 	return (1);
 }

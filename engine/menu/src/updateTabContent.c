@@ -1,4 +1,5 @@
 #include "../includes/updateTabContent.h"
+#include "../../debug/includes/printTabEntry.h"
 
 int	updateTabContent(TabMenu *menu) {
 	Tab *active_tab;
@@ -19,6 +20,7 @@ int	updateTabContent(TabMenu *menu) {
 	color.r = MENU_COLORS_BORDERS_R;
 	color.g = MENU_COLORS_BORDERS_G;
 	color.b = MENU_COLORS_BORDERS_B;
+
 	if (!menu) {
 		fputs("Arg Error : Missing arguments for updateTabContent\n", stderr);
 		return (0);
@@ -55,6 +57,7 @@ int	updateTabContent(TabMenu *menu) {
 				SDL_BlitSurface(menu->tab_content, NULL, menu->menu_surface, &(menu->tab_content_pos));
 				return (1);
 			}
+			printTabEntry(current_entry, 0);
 			SDL_BlitSurface(current_entry->surface, NULL, menu->tab_content, &pos);
 			if (i == active_tab->current_pos) {
 				pos.y += MENU_TAB_CONTENT_ITEM_EXCHANGE_ENTRY_HEIGHT / 2;

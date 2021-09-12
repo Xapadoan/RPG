@@ -1,6 +1,6 @@
 #include "../includes/addPotionDataToTab.h"
 
-int	addPotionDataToTab(TabMenu *menu, Potion *potion)
+int	addPotionDataToTab(TabMenu *menu, Potion *potion, unsigned int tab_id)
 {
 	TabEntry *entry;
 	Tab *tab;
@@ -26,12 +26,11 @@ int	addPotionDataToTab(TabMenu *menu, Potion *potion)
 		fputs("Error : Provided menu has no tab\n", stderr);
 		return (0);
 	}
-
 	tab = menu->tabs->first;
-	while (tab && tab->id != POTION_TAB_ID)
+	while (tab && tab->id != tab_id)
 		tab = tab->next;
-	if (tab->id != POTION_TAB_ID) {
-		fputs("Error : Could not fing potion tab\n", stderr);
+	if (tab->id != tab_id) {
+		fprintf(stderr, "Error : Could not find potion tab (%d)\n", tab_id);
 		return (0);
 	}
 
@@ -75,13 +74,6 @@ int	addPotionDataToTab(TabMenu *menu, Potion *potion)
 	entry->triggerAction = (FnctPtr)exchangePotion;
 	
 	//Put at the end of tab
-	if (!addEntryToTab(entry, tab, tab->nb_entries)) {
-		fputs("Error : Failed to add entry to tab\n", stderr);
-		return (0);
-	}
-
-	//Put at end of All tab
-	tab = menu->tabs->first;
 	if (!addEntryToTab(entry, tab, tab->nb_entries)) {
 		fputs("Error : Failed to add entry to tab\n", stderr);
 		return (0);

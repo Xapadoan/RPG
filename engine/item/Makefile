@@ -13,12 +13,12 @@ CC_FLAGS=-g\
 				 -iquote ../location/includes\
 				 -iquote ../hitbox/includes\
 
-OBJ=addCopyToPotionBag.o\
-		addToPotionBag.o\
+OBJ=addPotionToBag.o\
 		applyDurableHealthPotion.o\
 		applyDurableStaminaPotion.o\
 		applyHealthPotion.o\
 		applyStaminaPotion.o\
+		copyPotion.o\
 		deleteArmor.o\
 		deleteArmorBag.o\
 		deleteBook.o\
@@ -46,6 +46,7 @@ OBJ=addCopyToPotionBag.o\
 		loadItemBag.o\
 		loadItemContainerItems.o\
 		loadPotionBag.o\
+		removePotionFromBag.o\
 		setPotionData.o
 
 all: $(OBJ)
@@ -55,16 +56,8 @@ clean:
 
 re: clean $(OBJ)
 
-addCopyToPotionBag.o: src/addCopyToPotionBag.c\
-	includes/addCopyToPotionBag.h\
-	includes/Potion.h\
-	includes/initPotion.h\
-	includes/addToPotionBag.h\
-	../../includes/config/item.h\
-	../../lib/libMY/MY_string.h
-	$(CC) $(CC_FLAGS) $< -o $@
-addToPotionBag.o: src/addToPotionBag.c\
-	includes/addToPotionBag.h\
+addPotionToBag.o: src/addPotionToBag.c\
+	includes/addPotionToBag.h\
 	includes/Potion.h
 	$(CC) $(CC_FLAGS) $< -o $@
 applyDurableHealthPotion.o: src/applyDurableHealthPotion.c\
@@ -86,6 +79,12 @@ applyStaminaPotion.o: src/applyStaminaPotion.c\
 	includes/applyStaminaPotion.h\
 	includes/Potion.h\
 	../character/includes/Character.h
+	$(CC) $(CC_FLAGS) $< -o $@
+copyPotion.o: src/copyPotion.c\
+	includes/copyPotion.h\
+	includes/Potion.h\
+	includes/initPotion.h\
+	../../lib/libMY/MY_string.h
 	$(CC) $(CC_FLAGS) $< -o $@
 deleteArmor.o: src/deleteArmor.c\
 	includes/deleteArmor.h\
@@ -144,7 +143,9 @@ deleteWeaponBag.o: src/deleteWeaponBag.c\
 	$(CC) $(CC_FLAGS) $< -o $@
 exchangePotion.o: src/exchangePotion.c\
 	includes/exchangePotion.h\
-	includes/initPotionBag.h
+	includes/initPotionBag.h\
+	includes/copyPotion.h\
+	includes/addPotionToBag.h
 	$(CC) $(CC_FLAGS) $< -o $@
 initArmor.o: src/initArmor.c\
 	includes/initArmor.h\
@@ -243,8 +244,13 @@ loadPotionBag.o: src/loadPotionBag.c\
 	includes/loadPotionBag.h\
 	includes/initPotion.h\
 	includes/setPotionData.h\
-	includes/addCopyToPotionBag.h\
+	includes/addPotionToBag.h\
 	../../lib/libMY/MY_string.h
+	$(CC) $(CC_FLAGS) $< -o $@
+removePotionFromBag.o: src/removePotionFromBag.c\
+	includes/removePotionFromBag.h\
+	includes/Potion.h\
+	includes/deletePotion.h
 	$(CC) $(CC_FLAGS) $< -o $@
 setPotionData.o: src/setPotionData.c\
 	includes/setPotionData.h\

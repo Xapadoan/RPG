@@ -6,6 +6,7 @@
 #include "TabMenu.h"
 #include "ItemBag.h"
 #include "loadPotionTab.h"
+#include "loadAllTab.h"
 #include "loadArmorTab.h"
 #include "loadBookTab.h"
 #include "loadMiscItemTab.h"

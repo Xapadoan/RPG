@@ -23,6 +23,7 @@ all: $(OBJ)
 	$(MAKE) -C music all
 	$(MAKE) -C play all
 	$(MAKE) -C save all
+	$(MAKE) -C debug all
 
 clean:
 	rm -f $(OBJ)
@@ -38,6 +39,7 @@ clean:
 	$(MAKE) -C music clean
 	$(MAKE) -C play clean
 	$(MAKE) -C save clean
+	$(MAKE) -C debug clean
 
 re: clean $(OBJ)
 	$(MAKE) -C character re
@@ -52,6 +54,7 @@ re: clean $(OBJ)
 	$(MAKE) -C music re
 	$(MAKE) -C play re
 	$(MAKE) -C save re
+	$(MAKE) -C debug re
 
 endSDL.o: src/endSDL.c\
 	includes/endSDL.h

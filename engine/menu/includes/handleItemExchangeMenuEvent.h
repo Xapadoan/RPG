@@ -13,6 +13,7 @@
 #include "Potion.h"
 #include "getActiveTab.h"
 #include "getDisplayTabEntry.h"
+#include "updateItemExchangeTab.h"
 
 #include "item_categories.h"
 #include "ItemBag.h"

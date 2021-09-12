@@ -35,6 +35,7 @@ OBJ=addArmorDataToTab.o\
 		initTabEntry.o\
 		initTabList.o\
 		initTabMenu.o\
+		loadAllTab.o\
 		loadArmorTab.o\
 		loadBookTab.o\
 		loadItemDescription.o\
@@ -54,6 +55,7 @@ OBJ=addArmorDataToTab.o\
 		setTabMenuWidth.o\
 		setTabsPreviewHeight.o\
 		sortTabDefaultOrder.o\
+		updateItemExchangeTab.o\
 		updateItemExchangeHeader.o\
 		updateItemExchangeMenu.o\
 		updateItemExchangeTabsPreview.o\
@@ -120,7 +122,6 @@ addMiscItemDataToTab.o: src/addMiscItemDataToTab.c\
 addPotionDataToTab.o: src/addPotionDataToTab.c\
 	includes/addPotionDataToTab.h\
 	includes/TabMenu.h\
-	includes/tab_ids.h\
 	includes/addEntryToTab.h\
 	includes/initTabEntry.h\
 	includes/loadItemDescription.h\
@@ -195,6 +196,7 @@ handleItemExchangeMenuEvent.o: src/handleItemExchangeMenuEvent.c\
 	includes/TabMenu.h\
 	includes/getActiveTab.h\
 	includes/getDisplayTabEntry.h\
+	includes/updateItemExchangeTab.h\
 	../item/includes/item_categories.h\
 	../item/includes/Potion.h\
 	../../lib/libMY/MY_string.h\
@@ -216,6 +218,14 @@ initTabMenu.o: src/initTabMenu.c\
 	includes/initTabMenu.h\
 	includes/TabMenu.h\
 	includes/initTabList.h
+	$(CC) $(CC_FLAGS) $< -o $@
+loadAllTab.o: src/loadAllTab.c\
+	includes/loadAllTab.h\
+	includes/TabMenu.h\
+	includes/tab_ids.h\
+	includes/addPotionDataToTab.h\
+	../item/includes/ItemBag.h\
+	../item/includes/Potion.h
 	$(CC) $(CC_FLAGS) $< -o $@
 loadArmorTab.o: src/loadArmorTab.c\
 	includes/loadArmorTab.h\
@@ -243,6 +253,7 @@ loadItemExchangeMenuContent.o: src/loadItemExchangeMenuContent.c\
 	includes/loadItemExchangeMenuContent.h\
 	includes/TabMenu.h\
 	includes/loadPotionTab.h\
+	includes/loadAllTab.h\
 	includes/loadArmorTab.h\
 	includes/loadBookTab.h\
 	includes/loadMiscItemTab.h\
@@ -259,6 +270,7 @@ loadPotionTab.o: src/loadPotionTab.c\
 	includes/loadPotionTab.h\
 	includes/TabMenu.h\
 	includes/addPotionDataToTab.h\
+	includes/tab_ids.h\
 	../item/includes/Potion.h
 	$(CC) $(CC_FLAGS) $< -o $@
 loadTabPreviewIcon.o: src/loadTabPreviewIcon.c\
@@ -345,6 +357,16 @@ sortTabDefaultOrder.o: src/sortTabDefaultOrder.c\
 	includes/sortTabDefaultOrder.h\
 	includes/TabMenu.h
 	$(CC) $(CC_FLAGS) $< -o $@
+updateItemExchangeTab.o: src/updateItemExchangeTab.c\
+	includes/updateItemExchangeTab.h\
+	includes/TabMenu.h\
+	includes/initTab.h\
+	includes/deleteTab.h\
+	includes/loadPotionTab.h\
+	includes/tab_ids.h\
+	../item/includes/Potion.h\
+	../map/includes/Map.h
+	$(CC) $(CC_FLAGS) $< -o $@
 updateItemExchangeHeader.o: src/updateItemExchangeHeader.c\
 	includes/updateItemExchangeHeader.h\
 	includes/TabMenu.h\
@@ -362,6 +384,7 @@ updateItemExchangeMenu.o: src/updateItemExchangeMenu.c\
 	includes/putTabMenuBorders.h\
 	includes/updateItemExchangeHeader.h\
 	includes/updateItemExchangeTabsPreview.h\
+	includes/updateItemExchangeTab.h\
 	includes/updateTabContent.h\
 	../map/includes/Map.h
 	$(CC) $(CC_FLAGS) $< -o $@

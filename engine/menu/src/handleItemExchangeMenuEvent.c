@@ -25,7 +25,10 @@ int processItemAction(Tab *active_tab, TabMenu *menu) {
 	item_category = MY_hex2dec(splitted_misc[1]);
 	switch(item_category) {
 		case (ITEM_CATEGORY_POTION):
-			if (!((int (*)(int, PotionBag *, PotionBag *))entry->triggerAction)(MY_hex2dec(splitted_misc[2]), ((Team *)menu->refs[0])->bag->potions, ((MapItem *)menu->refs[1])->items->potions)) {
+			if (!menu->refs[0]) {
+				fputs("No bag ref", stderr);
+			}
+			if (!((int (*)(int, PotionBag *, PotionBag *))entry->triggerAction)(MY_hex2dec(splitted_misc[2]), ((MapItem *)menu->refs[1])->items->potions, ((Team *)menu->refs[0])->bag->potions)) {
 				fputs("Error : Failed to trigger potion action\n", stderr);
 				return (0);
 			}
@@ -33,6 +36,12 @@ int processItemAction(Tab *active_tab, TabMenu *menu) {
 		default:
 			fputs("Warning : Unknow item category\n", stderr);
 			break;
+	}
+
+	// Update Tab
+	if (!updateItemExchangeTab(menu)) {
+		fputs("Error : Failed to update tab entries surfaces\n", stderr);
+		return (0);
 	}
 	return (1);
 }
@@ -94,9 +103,8 @@ int	handleItemExchangeMenuEvent(TabMenu *menu, SDL_KeyboardEvent *key, unsigned 
 			*quit = 1;
 			break;
 		case (CONTROLS_ACTION) :
-			if (getDisplayTabEntry(active_tab, active_tab->current_pos)->triggerAction)
-			{
-				write(1, "Menu trigger acions are not ready yet !\n", 40);
+			if (!processItemAction(active_tab, menu)) {
+				fputs("Warning : Failed to process MenuItem action\n", stderr);
 			}
 			break;
 		case (CONTROLS_SWITCH) :

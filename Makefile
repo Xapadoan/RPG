@@ -19,6 +19,7 @@ CC_FLAGS=-g\
 				 -iquote engine/item/includes\
 				 -iquote engine/font/includes\
 				 -iquote engine/display/includes\
+				 -iquote engine/debug/includes\
 				 -iquote menu/main_menu/includes\
 				 -iquote lib/libMY\
 				 -iquote menu/character_creation/includes
@@ -104,6 +105,11 @@ ENGINE_DISPLAY_OBJ=engine/display/addToSpriteList.o\
 		engine/display/putPixel.o\
 		engine/display/sortGroundItems.o
 
+ENGINE_DEBUG_OBJ=engine/debug/printPotion.o\
+		engine/debug/printPotionBag.o\
+		engine/debug/printTab.o\
+		engine/debug/printTabEntry.o
+
 ENGINE_FONT_OBJ=engine/font/putFont.o\
 		engine/font/putFontCenter.o\
 		engine/font/putFontColumn.o
@@ -123,12 +129,12 @@ ENGINE_HITBOX_OBJ=engine/hitbox/addToHitbox.o\
 		engine/hitbox/restrictMovements.o\
 		engine/hitbox/scanIntersection.o
 
-ENGINE_ITEM_OBJ=engine/item/addCopyToPotionBag.o\
-		engine/item/addToPotionBag.o\
+ENGINE_ITEM_OBJ=engine/item/addPotionToBag.o\
 		engine/item/applyDurableHealthPotion.o\
 		engine/item/applyDurableStaminaPotion.o\
 		engine/item/applyHealthPotion.o\
 		engine/item/applyStaminaPotion.o\
+		engine/item/copyPotion.o\
 		engine/item/deleteArmor.o\
 		engine/item/deleteArmorBag.o\
 		engine/item/deleteBook.o\
@@ -156,6 +162,7 @@ ENGINE_ITEM_OBJ=engine/item/addCopyToPotionBag.o\
 		engine/item/loadItemBag.o\
 		engine/item/loadItemContainerItems.o\
 		engine/item/loadPotionBag.o\
+		engine/item/removePotionFromBag.o\
 		engine/item/setPotionData.o
 
 ENGINE_LOCATION_OBJ=engine/location/deleteLocation.o\
@@ -209,6 +216,7 @@ ENGINE_MENU_OBJ=engine/menu/addArmorDataToTab.o\
 		engine/menu/initTabEntry.o\
 		engine/menu/initTabList.o\
 		engine/menu/initTabMenu.o\
+		engine/menu/loadAllTab.o\
 		engine/menu/loadArmorTab.o\
 		engine/menu/loadBookTab.o\
 		engine/menu/loadItemDescription.o\
@@ -229,6 +237,7 @@ ENGINE_MENU_OBJ=engine/menu/addArmorDataToTab.o\
 		engine/menu/setTabMenuWidth.o\
 		engine/menu/setTabsPreviewHeight.o\
 		engine/menu/sortTabDefaultOrder.o\
+		engine/menu/updateItemExchangeTab.o\
 		engine/menu/updateItemExchangeHeader.o\
 		engine/menu/updateItemExchangeMenu.o\
 		engine/menu/updateItemExchangeTabsPreview.o\
@@ -267,7 +276,8 @@ ENGINE_OBJ=engine/endSDL.o\
 		$(ENGINE_MOVE_OBJ)\
 		$(ENGINE_MUSIC_OBJ)\
 		$(ENGINE_PLAY_OBJ)\
-		$(ENGINE_SAVE_OBJ)
+		$(ENGINE_SAVE_OBJ)\
+		$(ENGINE_DEBUG_OBJ)
 
 MENU_CHARACTER_CREATION_OBJ=menu/character_creation/chooseConfirm.o\
 		menu/character_creation/chooseRace.o\

@@ -1,4 +1,4 @@
-#include "../includes/openItemContainer.h"
+#include "openItemContainer.h"
 
 int	openItemContainer(MapItem *self, Map *map, Team *team, SDL_Surface *screen, char **argv)
 {

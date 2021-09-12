@@ -3,9 +3,7 @@
 PotionBag	*initPotionBag(void)
 {
 	PotionBag *potions;
-	Potion *potion;
 
-	potion = NULL;
 	potions = NULL;
 
 	potions = malloc(sizeof(*potions));
@@ -14,15 +12,9 @@ PotionBag	*initPotionBag(void)
 		return (NULL);
 	}
 
-	potion = initPotion();
-	if (!potion) {
-		fputs("Error : Failed to init potion\n", stderr);
-		return (NULL);
-	}
-
 	potions->nb = 0;
-	potion->value = 0;
-	potion->weight = 0;
-	potions->first = potion;
+	potions->value = 0;
+	potions->weight = 0;
+	potions->first = NULL;
 	return (potions);
 }

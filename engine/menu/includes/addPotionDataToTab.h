@@ -12,20 +12,19 @@
 #include "MY_string.h"
 #include "MY_convert.h"
 
-#include "tab_ids.h"
 #include "item_categories.h"
 
 #include "TabMenu.h"
 #include "initTabEntry.h"
 #include "addEntryToTab.h"
 #include "loadItemDescription.h"
+#include "exchangePotion.h"
 #include "Potion.h"
 #include "putFont.h"
-#include "exchangePotion.h"
 
 #include "FnctPtr.h"
 
-int	addPotionDataToTab(TabMenu *menu, Potion *potion);
+int	addPotionDataToTab(TabMenu *menu, Potion *potion, unsigned int tab_id);
 int	setPotionEntrySurface(TabEntry *entry, Potion *potion);
 
 #endif

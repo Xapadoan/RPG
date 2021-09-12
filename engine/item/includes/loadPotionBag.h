@@ -8,7 +8,7 @@
 
 #include "initPotion.h"
 #include "setPotionData.h"
-#include "addCopyToPotionBag.h"
+#include "addPotionToBag.h"
 
 int	loadPotionBag(PotionBag *potions, FILE *file);
 

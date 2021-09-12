@@ -12,6 +12,12 @@ int	loadItemExchangeMenuContent(TabMenu *menu, ItemBag *bag)
 		return (0);
 	}
 
+	//Create all tab and add to menu_tabs
+	if (!loadAllTab(menu, bag)) {
+		fputs("Error : Failed to load all on menu\n", stderr);
+		return (0);
+	}
+
 	//Create armor tab and add to menu_tabs
 	if (!loadArmorTab(menu, bag->armors)) {
 		fputs("Error : Failed to load armors on menu\n", stderr);

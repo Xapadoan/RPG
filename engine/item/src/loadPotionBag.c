@@ -34,7 +34,7 @@ int	loadPotionBag(PotionBag *potions, FILE *file)
 		}
 
 		//Add to bag
-		if (!addCopyToPotionBag(potions, potion)) {
+		if (!addPotionToBag(potion, potion->nb, potions)) {
 			fputs("Error : Failed to add potion to potion bag\n", stderr);
 			return (0);
 		}
